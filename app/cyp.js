@@ -1430,6 +1430,24 @@ class Settings extends Component {
 
 customElements.define("cyp-settings", Settings);
 
+class Close extends Component {
+	constructor() {
+		super();
+	}
+
+	_onAppLoad() {
+	}
+
+	_onComponentChange(c, isThis) {
+		console.log("onComponentChange()");
+		console.log(c); console.log(isThis);
+		if (isThis)
+			self.close();
+	}
+}
+
+customElements.define("cyp-close", Close);
+
 class Search extends HTMLElement {
 	constructor() {
 		super();
